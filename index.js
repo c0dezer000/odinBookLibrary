@@ -42,9 +42,12 @@ function displayBook(){
         bookAuthor.textContent = "Book Author: "
         const bookPages = document.createElement('p')
         bookPages.textContent = "Book Pages: "
+        const readStatus = document.createElement('p')
+        readStatus.textContent = "Status?"
         bookCard.appendChild(bookTitle)
         bookCard.appendChild(bookAuthor)
         bookCard.appendChild(bookPages)
+        bookCard.appendChild(readStatus)
         
         // bookTitle.textContent += `${book.title}` 
         // bookAuthor.textContent += `${book.author}`
@@ -64,6 +67,9 @@ showDialog.addEventListener('click', ()=>{
     bookPagesValue.value = ""
 })
 addBookBtn.addEventListener('click',()=>{
+    if(bookTitleValue.value === "" || bookAuthorValue.value === ""|| bookPagesValue.value === ""){
+        return
+    }
     const title = bookTitleValue.value
     const author = bookAuthorValue.value
     const pages = bookPagesValue.value

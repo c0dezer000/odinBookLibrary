@@ -12,24 +12,27 @@
             <button id="addBtn"><svg class="addIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>plus</title><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg> Add Book</button>
         </div>
         <div class="bookContainer " id="bookContainer">
-            
+           
         </div>
         <dialog>
             <div class="dialogContainer">
                 <div class="inputBox">
-                    <p>Book Title </p>
+                    <p>Book Title: </p>
                     <input type="text" id="bookTitleValue">
                 </div>
                 <div class="inputBox">
-                    <p>Book Author </p>
+                    <p>Book Author: </p>
                     <input type="text" id="bookAuthorValue">
                 </div>
                 <div class="inputBox">
-                    <p>Book Pages </p>
-                    <input type="text" id="bookPagesValue">
+                    <p>Book Pages: </p>
+                    <input type="number" id="bookPagesValue"min = 0>
+                </div>
+                <div class="checkBox">
+                    <p>Done reading?: </p>
+                    <input type="checkbox">
                 </div>
             </div>
-            <button>Read</button>
             <form method="dialog">
                 <button autofocus id="addBookBtn">Add Book</button>
             </form>
